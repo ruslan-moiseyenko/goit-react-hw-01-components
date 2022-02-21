@@ -1,12 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { App } from 'components/App';
+//import { App } from 'components/App';
+import { User } from './components/Profile/User.jsx';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 
+
+import user from './components/Profile/user.json'
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <User
+      avatar={user.avatar}
+      tag={user.tag}
+      location={user.location}
+      followers={user.stats.followers}
+      views={user.stats.views}
+      likes={user.stats.likes}
+    />
   </React.StrictMode>,
   document.getElementById('root')
 );

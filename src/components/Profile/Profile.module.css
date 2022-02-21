@@ -1,0 +1,64 @@
+:root {
+  --stats-bg-color: rgb(194, 248, 248);
+  --border-color: rgb(141, 216, 216);
+  --shadow-color: rgba(134, 172, 172, 0.3);
+}
+
+.profile{
+  display: inline-block;
+  width: 280px;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px 2px var(--shadow-color);
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 0;
+}
+
+.avatar {
+  width: 130px;
+  border-radius: 50%;
+}
+
+.stats {
+  list-style-type: none;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  padding: 0;
+
+  justify-content: space-between;
+  background-color: var(--stats-bg-color);
+  border: 1px solid var(--border-color);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+}
+
+.name{
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.stats li{
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  padding: 15px;
+}
+
+.stats li:first-child{
+  border-bottom-left-radius: 5px;
+  border-right: 1px solid var(--border-color);
+}
+.stats li:last-child{
+  border-bottom-right-radius: 5px;
+  border-left: 1px solid var(--border-color);
+}
+
+.quantity{
+  font-weight: bold;
+  font-size: 16px;
+}
