@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import { App } from 'components/App';
 import { User } from './components/Profile/User.jsx';
+import { StatsList } from './components/Statistics/StatsList';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 
 
 import user from './components/Profile/user.json'
+import data from './components/Statistics/data.json'
+// console.log(data);
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,7 +20,8 @@ ReactDOM.render(
       views={user.stats.views}
       likes={user.stats.likes}
     />
-  </React.StrictMode>,
+    <StatsList title="Upload stats" stats={data} />
+  </React.StrictMode >,
   document.getElementById('root')
 );
 
