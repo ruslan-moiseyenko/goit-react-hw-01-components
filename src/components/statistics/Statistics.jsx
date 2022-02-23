@@ -1,20 +1,18 @@
-// import PropTypes from 'prop-types';
-// import styles from './statistics.module.css';
+import PropTypes from 'prop-types';
+import styles from './statistics.module.css';
+import getRandomHexColor from './getRandomHexColor';
 
-export const Statistics = ({ id, label, percentage }) => {
-  //console.log("data ", { data });
-  console.log(id, label, percentage);
+export const Statistics = ({ label, percentage }) => {
   return (
-    <ul className="stat-list" key={id}>
-      <li className="item">
-        <span className="label">{label}</span>
-        <span className="percentage">{percentage}</span>
-      </li>
-    </ul>
+    <li className={styles.item} style={{ backgroundColor: getRandomHexColor() }}>
+      <span className={styles.label}>{label}</span>
+      <span className="percentage">{percentage}</span>
+    </li>
   );
 }
 
-// Statistics.propTypes = {
-//   title: PropTypes.string,
-// }
+Statistics.propTypes = {
+  label: PropTypes.string,
+  percentage: PropTypes.number,
+}
 

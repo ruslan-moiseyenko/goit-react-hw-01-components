@@ -14,7 +14,7 @@ export const User = ({ avatar, tag, location, followers, views, likes }) => {
         />
         <p className={styles.name}>Petra Marica</p>
         <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
+        <p className={styles.location}>{location}</p>
       </div>
 
       <ul className={styles.stats}>

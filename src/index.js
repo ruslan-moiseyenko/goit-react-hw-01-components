@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { User } from './components/Profile/User.jsx';
-import { StatsList } from './components/Statistics/StatsList';
+import StatsList from './components/Statistics/StatsList';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 
@@ -21,6 +21,7 @@ ReactDOM.render(
       likes={user.stats.likes}
     />
     <StatsList title="Upload stats" stats={data} />
+    <StatsList stats={data} />
   </React.StrictMode >,
   document.getElementById('root')
 );
