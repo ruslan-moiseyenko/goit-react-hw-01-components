@@ -1,27 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { User } from './components/Profile/User.jsx';
-import StatsList from './components/Statistics/StatsList';
+
 import reportWebVitals from './reportWebVitals';
+import App from './App.js'
 import './index.css';
 
 
-import user from './components/Profile/user.json'
-import data from './components/Statistics/data.json'
-// console.log(data);
-
 ReactDOM.render(
   <React.StrictMode>
-    <User
-      avatar={user.avatar}
-      tag={user.tag}
-      location={user.location}
-      followers={user.stats.followers}
-      views={user.stats.views}
-      likes={user.stats.likes}
-    />
-    <StatsList title="Upload stats" stats={data} />
-    <StatsList stats={data} />
+    <App />
+
   </React.StrictMode >,
   document.getElementById('root')
 );
