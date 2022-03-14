@@ -2,13 +2,16 @@
 import React from 'react';
 import { User } from './components/Profile/User.jsx';
 import StatsList from './components/statistics/StatsList.js';
+import FriendList from './components/friends/FriendList';
 
-import user from './components/Profile/user.json'
-import data from './components/statistics/data.json'
+
+import user from './components/Profile/user.json';
+import data from './components/statistics/data.json';
+import friends from "./components/friends/friends.json";
 
 export default function App () {
     return (
-        <div>
+        <>
         <User
         avatar={user.avatar}
         tag={user.tag}
@@ -19,6 +22,8 @@ export default function App () {
       />
       <StatsList title="Upload stats" stats={data} />
       <StatsList stats={data} />
-      </div>
+
+      <FriendList friends={friends} />;
+      </>
     );
 }
