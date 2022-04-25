@@ -13,16 +13,16 @@ export const Th = styled.th`
     color: white;
 `;
 
-export const Table = styled.tbody`
+export const Table = styled.table`
     text-align: center;
     width: 500px;
 `;
 
 export const Tr = styled.tr`
     height: 50px;
-    background-color: ${props => {return (props.head? 'skyblue': 'default')}};
-    &:nth-child(2n){
-        background-color: gray;      
+    background-color: ${props => { return (props.head ? 'skyblue' : 'default') }};
+    &:nth-of-type(2n){
+        background-color: gray;
     }
 `;
 

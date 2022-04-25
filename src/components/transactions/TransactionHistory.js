@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Transaction from './Transaction';
 import { Tbody, Table, Tr, Th } from './Transactions.styled';
 
-export default function TransactionHistory( {items} ) {
+export default function TransactionHistory({ items }) {
   return (
     <Table>
       <thead>
@@ -14,9 +15,17 @@ export default function TransactionHistory( {items} ) {
         </Tr>
       </thead>
       <Tbody>
-      {items.map(item =>  <Transaction key={item.id} type={item.type} amount={item.amount} currency={item.currency} />)}
-       
+        {items.map(({ id, type, amount, currency }) => <Transaction key={id} type={type} amount={amount} currency={currency} />)}
       </Tbody>
     </Table>
   );
+}
+
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    amount: PropTypes.string.isRequired,
+    currency: PropTypes.string.isRequired,
+  }))
 }

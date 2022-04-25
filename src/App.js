@@ -1,26 +1,21 @@
 
 import React from 'react';
-import { User } from './components/Profile/User.jsx';
-import StatsList from './components/statistics/StatsList.js';
-import FriendList from './components/friends/FriendList';
-import TransactionHistory from './components/transactions/TransactionHistory.js';
+import { User } from './components/User/User.jsx';
+import StatsList from './components/Statistics/Statistics.js';
+import FriendList from './components/Friends/FriendList';
+import TransactionHistory from './components/Transactions/TransactionHistory.js';
 
 
-import user from './components/Profile/user.json';
-import data from './components/statistics/data.json';
-import friends from "./components/friends/friends.json";
-import transactions from "./components/transactions/transactions.json";
+import user from './components/User/user.json';
+import data from './components/Statistics/data.json';
+import friends from "./components/Friends/friends.json";
+import transactions from "./components/Transactions/transactions.json";
 
-export default function App () {
-    return (
-        <>
-        <User
-        avatar={user.avatar}
-        tag={user.tag}
-        location={user.location}
-        followers={user.stats.followers}
-        views={user.stats.views}
-        likes={user.stats.likes}
+export default function App() {
+  return (
+    <>
+      <User
+        user={user}
       />
       <StatsList title="Upload stats" stats={data} />
       <StatsList stats={data} />
@@ -28,6 +23,6 @@ export default function App () {
       <FriendList friends={friends} />
 
       <TransactionHistory items={transactions} />
-      </>
-    );
+    </>
+  );
 }
