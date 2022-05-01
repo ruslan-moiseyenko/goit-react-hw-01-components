@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Profile.module.css';
+import styles from './User.module.css';
 
 
-export const User = ({ user }) => {
-  const { username, avatar, tag, location, stats } = user;
+export const User = ({ username, avatar, tag, location, stats }) => {
+  const { followers, views, likes } = stats;
 
   return (
     <div className={styles.profile}>
@@ -22,15 +22,15 @@ export const User = ({ user }) => {
       <ul className={styles.stats}>
         <li>
           <span className="label">Followers</span>
-          <span className={styles.quantity}>{stats.followers}</span>
+          <span className={styles.quantity}>{followers}</span>
         </li>
         <li>
           <span className="label">Views</span>
-          <span className={styles.quantity}>{stats.views}</span>
+          <span className={styles.quantity}>{views}</span>
         </li>
         <li>
           <span className="label">Likes</span>
-          <span className={styles.quantity}>{stats.likes}</span>
+          <span className={styles.quantity}>{likes}</span>
         </li>
       </ul>
     </div>
